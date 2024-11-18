@@ -25,7 +25,6 @@ const materials = [
     { name: 'Insulated Panels', company: 'Skanska', price: 2300, savings: 350, impact: 12, location: 'north', type: 'insulation' }
 ];
 
-// Updated Filter Function
 function applyFilters() {
     const locationFilter = document.getElementById('location').value;
     const typeFilter = document.getElementById('material-type').value;
@@ -42,7 +41,20 @@ function applyFilters() {
     populateMaterialList(filteredMaterials);
 }
 
+function handleSearchInput(event) {
+    const searchText = event.target.value.toLowerCase();
+    const filteredMaterials = materials.filter(material => {
+        return (
+            material.name.toLowerCase().includes(searchText) ||
+            material.company.toLowerCase().includes(searchText) ||
+            material.location.toLowerCase().includes(searchText)
+        );
+    });
+    populateMaterialList(filteredMaterials);
+}
+
 document.getElementById('apply-filters').addEventListener('click', applyFilters);
+document.getElementById('search-bar').addEventListener('input', handleSearchInput);
 
 function populateMaterialList(materials) {
     const materialList = document.getElementById('material-list');
