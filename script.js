@@ -6,7 +6,7 @@ function filterMaterials() {
     const materials = document.querySelectorAll('.material');
 
     materials.forEach(material => {
-        const materialName = material.querySelector('h3').textContent.toLowerCase();
+        const materialName = material.querySelector('p').textContent.toLowerCase();
         const materialCategory = material.getAttribute('data-category').toLowerCase();
         const materialPrice = material.getAttribute('data-price').toLowerCase();
 

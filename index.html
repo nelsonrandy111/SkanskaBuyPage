@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skanska Materials Market Search</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,9 +23,13 @@
     </header>
 
     <main>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search materials..." onkeyup="filterMaterials()">
-        </div>
+        <section class="hero">
+            <h2>Find the Best Materials for Your Next Project</h2>
+            <p>Search, filter, and explore a wide variety of construction materials.</p>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search materials..." onkeyup="filterMaterials()">
+            </div>
+        </section>
 
         <div class="filters">
             <label for="category-filter">Category:</label>
@@ -64,6 +69,10 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Skanska Materials. All rights reserved.</p>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
