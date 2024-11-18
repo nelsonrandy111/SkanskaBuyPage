@@ -3,85 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skanska Materials Market Search</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Skanska Material Market</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <h1 class="logo">Skanska Materials</h1>
-            <nav class="nav-links">
-                <a href="#" class="nav-button">Home</a>
-                <a href="#" class="nav-button">Buy</a>
-                <a href="#" class="nav-button">Sell</a>
-                <a href="#" class="nav-button">Account</a>
-                <a href="#" class="nav-button">Analytics</a>
-                <a href="#" class="nav-button">Contact</a>
-            </nav>
-        </div>
-        <div class="hero">
-            <h2>Find Sustainable Construction Materials</h2>
-            <input type="text" id="search-bar" placeholder="Search materials..." onkeyup="filterMaterials()">
-        </div>
+        <div class="logo">Skanska Material Market</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sell</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="filters">
-            <label for="category-filter">Category:</label>
-            <select id="category-filter" onchange="filterMaterials()">
-                <option value="">All</option>
-                <option value="wood">Wood</option>
-                <option value="steel">Steel</option>
-                <option value="concrete">Concrete</option>
-                <option value="plastic">Plastic</option>
-            </select>
-
-            <label for="price-filter">Price Range:</label>
-            <select id="price-filter" onchange="filterMaterials()">
-                <option value="">All</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-        </section>
-
-        <section class="featured">
-            <h3>Featured Materials</h3>
-            <div class="materials-list">
-                <div class="material" data-category="wood" data-price="low">
-                    <img src="wood.jpg" alt="Wood Planks">
-                    <p>Wood Planks</p>
-                    <p class="price">$15 per unit</p>
-                </div>
-                <div class="material" data-category="steel" data-price="high">
-                    <img src="steel.jpg" alt="Steel Beams">
-                    <p>Steel Beams</p>
-                    <p class="price">$50 per unit</p>
-                </div>
-                <div class="material" data-category="concrete" data-price="medium">
-                    <img src="concrete.jpg" alt="Concrete Blocks">
-                    <p>Concrete Blocks</p>
-                    <p class="price">$30 per unit</p>
-                </div>
-                <div class="material" data-category="plastic" data-price="low">
-                    <img src="plastic.jpg" alt="Plastic Sheets">
-                    <p>Plastic Sheets</p>
-                    <p class="price">$10 per unit</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="sustainability">
-            <h3>Building a Sustainable Future</h3>
-            <p>Discover our commitment to eco-friendly construction solutions.</p>
-        </section>
+        <div id="search-section">
+            <input type="text" id="search-bar" placeholder="Search for materials, locations, or companies...">
+        </div>
     </main>
 
-    <footer>
-        <p>© 2024 Skanska Materials. All rights reserved.</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
