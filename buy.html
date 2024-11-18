@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Materials - Skanska Material Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Skanska Material Market</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="search-filter">
+            <input type="text" id="search-bar" placeholder="Search for materials...">
+            <select id="filter" aria-label="Filter by material type">
+                <option value="all">All Materials</option>
+                <option value="steel">Steel</option>
+                <option value="concrete">Concrete</option>
+                <option value="timber">Timber</option>
+                <option value="glass">Glass</option>
+                <option value="aluminum">Aluminum</option>
+            </select>
+            <button id="search-button">Search</button>
+        </div>
+        <div id="results">
+            <p>Search results will appear here...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us at Skanska Material Market</p>
+    </footer>
+
+    <script src="buy.js"></script>
+</body>
+</html>
