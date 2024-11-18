@@ -1,0 +1,110 @@
+/* General reset and body styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5fff5; /* Light green background */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8f5e8; /* Light green header */
+    color: #004d00; /* Dark green text */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004d00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #004d00;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #cceccc; /* Light green button */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #99cc99; /* Darker green on hover */
+}
+
+/* Main content styling */
+main {
+    margin-top: 60px; /* Offset for fixed header */
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-bar, #filter, #search-button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#search-bar {
+    flex: 1;
+}
+
+#search-button {
+    background-color: #cceccc;
+    color: #004d00;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #99cc99;
+}
+
+#results {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #e8f5e8;
+    color: #004d00;
+}
