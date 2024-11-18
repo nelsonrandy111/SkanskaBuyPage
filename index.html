@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skanska Material Market</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Material Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">Skanska Material Market</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sell</a></li>
-                <li><a href="#">Buy</a></li>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Material Marketplace</h1>
     </header>
 
     <main>
-        <div id="search-section">
-            <input type="text" id="search-bar" placeholder="Search for materials, locations, or companies...">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for materials or companies...">
+        </div>
+
+        <!-- Scrollable Material Listings -->
+        <div class="material-list-container">
+            <ul id="material-list"></ul>
         </div>
     </main>
 
