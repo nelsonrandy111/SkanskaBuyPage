@@ -25,18 +25,18 @@ const materials = [
     { name: 'Insulated Panels', company: 'Skanska', price: 2300, savings: 350, impact: 12, location: 'north', type: 'insulation' }
 ];
 
-// Filter Materials based on applied filters
+// Updated Filter Function
 function applyFilters() {
     const locationFilter = document.getElementById('location').value;
     const typeFilter = document.getElementById('material-type').value;
     const maxCost = document.getElementById('cost').value;
-    const maxImpact = document.getElementById('impact').value;
+    const minImpact = document.getElementById('impact').value;
 
     const filteredMaterials = materials.filter(material => {
         return (!locationFilter || material.location === locationFilter) &&
             (!typeFilter || material.type === typeFilter) &&
             (!maxCost || material.price <= maxCost) &&
-            (!maxImpact || material.impact <= maxImpact);
+            (!minImpact || material.impact >= minImpact);
     });
 
     populateMaterialList(filteredMaterials);
@@ -52,6 +52,7 @@ function populateMaterialList(materials) {
         li.innerHTML = `
             <strong>Material:</strong> ${material.name} <br>
             <strong>Company:</strong> ${material.company} <br>
+            <strong>Location:</strong> ${material.location} <br>
             <strong>Price:</strong> $${material.price} <br>
             <strong>Environmental Impact:</strong> ${material.impact}% <br>
         `;
