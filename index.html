@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skanska Materials Market Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Skanska Materials Market Search</h1>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search materials..." onkeyup="filterMaterials()">
+        </div>
+
+        <div class="filters">
+            <label for="category-filter">Category:</label>
+            <select id="category-filter" onchange="filterMaterials()">
+                <option value="">All</option>
+                <option value="wood">Wood</option>
+                <option value="steel">Steel</option>
+                <option value="concrete">Concrete</option>
+                <option value="plastic">Plastic</option>
+            </select>
+
+            <label for="price-filter">Price Range:</label>
+            <select id="price-filter" onchange="filterMaterials()">
+                <option value="">All</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+
+        <div class="materials-list">
+            <div class="material" data-category="wood" data-price="low">
+                <p>Wood Planks</p>
+                <p class="price">$15 per unit</p>
+            </div>
+            <div class="material" data-category="steel" data-price="high">
+                <p>Steel Beams</p>
+                <p class="price">$50 per unit</p>
+            </div>
+            <div class="material" data-category="concrete" data-price="medium">
+                <p>Concrete Blocks</p>
+                <p class="price">$30 per unit</p>
+            </div>
+            <div class="material" data-category="plastic" data-price="low">
+                <p>Plastic Sheets</p>
+                <p class="price">$10 per unit</p>
+            </div>
+            <!-- Add more material items as needed -->
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
