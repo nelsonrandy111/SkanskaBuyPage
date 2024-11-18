@@ -15,7 +15,7 @@ function populateMaterialList(materials) {
     const materialList = document.getElementById('material-list');
     materialList.innerHTML = ''; // Clear any existing entries
 
-    materials.forEach((material, index) => {
+    materials.forEach((material) => {
         const li = document.createElement('li');
         li.innerHTML = `
             <strong>Material:</strong> ${material.name} <br>
@@ -31,7 +31,6 @@ function populateMaterialList(materials) {
             <a class="details-link">Details</a>
         `;
 
-        // Add hover effect
         li.addEventListener('mouseover', () => {
             li.style.backgroundColor = "#d1f7d1"; // Highlight
         });
@@ -44,7 +43,7 @@ function populateMaterialList(materials) {
     });
 }
 
-// Functionality for the search bar (non-functional search simulation)
+// Functionality for the search bar
 function setupSearchBar() {
     const searchBar = document.getElementById('search-bar');
 

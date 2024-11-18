@@ -53,9 +53,9 @@ nav ul li a:hover {
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 0px; /* Move the search bar higher */
-    height: calc(100vh - 300px); /* Adjust to maintain balance */
+    align-items: flex-start; /* Align content at the top */
+    margin-top: 100px; /* Leave space for fixed header */
+    padding: 20px;
 }
 
 #search-section {
@@ -78,3 +78,39 @@ main {
     border-color: #339900;
     box-shadow: 0 4px 8px rgba(51, 153, 0, 0.3); /* Highlight on focus */
 }
+
+#material-list {
+    margin-top: 20px; /* Space between search bar and list */
+    max-height: 400px; /* Limit height of the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ddd; /* Optional: Border for definition */
+    border-radius: 10px; /* Match other elements' rounding */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 10px; /* Inner spacing for list items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#material-list li {
+    list-style: none; /* Remove default list bullet points */
+    margin-bottom: 10px; /* Space between items */
+    padding: 10px; /* Inner padding for content */
+    border: 1px solid #cceccc; /* Light green border */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #f5fff5; /* Match main theme */
+}
+
+#material-list li:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+.details-link {
+    color: #006600; /* Green link color */
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.details-link:hover {
+    text-decoration: underline;
+}
+
