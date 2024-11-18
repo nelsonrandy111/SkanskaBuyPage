@@ -54,7 +54,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Move the search bar higher */
+    margin-top: 0px; /* Move the search bar higher */
     height: calc(100vh - 160px); /* Adjust to maintain balance */
 }
 
