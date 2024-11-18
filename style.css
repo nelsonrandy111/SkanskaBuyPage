@@ -55,7 +55,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 0px; /* Move the search bar higher */
-    height: calc(100vh - 160px); /* Adjust to maintain balance */
+    height: calc(100vh - 120px); /* Adjust to maintain balance */
 }
 
 #search-section {
