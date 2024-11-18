@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f5fff5; /* Light green background */
+    background-color: #f5fff5; /* Light green */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -11,8 +11,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e8f5e8; /* Lighter green for header */
-    color: #004d00; /* Green for text */
+    background-color: #e8f5e8;
+    color: #004d00;
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -23,9 +23,9 @@ header {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: #004d00; /* Green title */
+    color: #004d00;
     position: absolute;
-    left: 20px; /* Logo stays on the left */
+    left: 20px;
 }
 
 nav ul {
@@ -37,30 +37,74 @@ nav ul {
 }
 
 nav ul li a {
-    color: #004d00; /* Dark green for links */
+    color: #004d00;
     text-decoration: none;
     font-size: 1em;
-    padding: 8px 16px; /* Adjusted padding */
+    padding: 8px 16px;
     border-radius: 5px;
-    background-color: #cceccc; /* Light green button */
+    background-color: #cceccc;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #99cc99; /* Darker green on hover */
+    background-color: #99cc99;
 }
 
 main {
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align content at the top */
-    margin-top: 100px; /* Leave space for fixed header */
+    justify-content: space-between;
+    margin-top: 100px; /* Space for fixed header */
     padding: 20px;
+    height: calc(100vh - 100px); /* Fill remaining screen height */
+}
+
+#filter-section {
+    width: 20%; /* Fixed width for filters */
+    padding: 20px;
+    background-color: #e8f5e8; /* Subtle green for filter area */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#filter-section h3 {
+    color: #004d00;
+    margin-top: 0;
+}
+
+#filters-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#filters-form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #004d00;
+}
+
+#filters-form input, #filters-form select, #filters-form button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#filters-form button {
+    background-color: #339900;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#filters-form button:hover {
+    background-color: #2a7a00;
 }
 
 #search-section {
-    width: 80%;
-    max-width: 800px;
+    width: 75%; /* Main content occupies the rest of the space */
 }
 
 #search-bar {
@@ -69,48 +113,22 @@ main {
     font-size: 1.2em;
     border: 2px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#search-bar:focus {
-    outline: none;
-    border-color: #339900;
-    box-shadow: 0 4px 8px rgba(51, 153, 0, 0.3); /* Highlight on focus */
 }
 
 #material-list {
-    margin-top: 20px; /* Space between search bar and list */
-    max-height: 400px; /* Limit height of the scrollable area */
-    overflow-y: auto; /* Enable vertical scrolling */
-    border: 1px solid #ddd; /* Optional: Border for definition */
-    border-radius: 10px; /* Match other elements' rounding */
-    background-color: #ffffff; /* White background for contrast */
-    padding: 10px; /* Inner spacing for list items */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px;
+    max-height: calc(100vh - 180px); /* Dynamic height */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 10px;
 }
 
 #material-list li {
-    list-style: none; /* Remove default list bullet points */
-    margin-bottom: 10px; /* Space between items */
-    padding: 10px; /* Inner padding for content */
-    border: 1px solid #cceccc; /* Light green border */
-    border-radius: 5px; /* Slightly rounded corners */
-    background-color: #f5fff5; /* Match main theme */
-}
-
-#material-list li:last-child {
-    margin-bottom: 0; /* No margin for the last item */
-}
-
-.details-link {
-    color: #006600; /* Green link color */
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.details-link:hover {
-    text-decoration: underline;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #cceccc;
+    background-color: #f5fff5;
 }
 

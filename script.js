@@ -1,66 +1,44 @@
-// Mock material data
 const materials = [
-    { name: 'Steel Beams', company: 'Skanska', price: '$2000', savings: '$300', impact: '20%' },
-    { name: 'Concrete Blocks', company: 'Turner Construction', price: '$1500', savings: '$200', impact: '15%' },
-    { name: 'Recycled Timber', company: 'Bechtel', price: '$1000', savings: '$400', impact: '30%' },
-    { name: 'Glass Panels', company: 'Skanska', price: '$2500', savings: '$500', impact: '10%' },
-    { name: 'Aluminum Sheets', company: 'Fluor', price: '$1800', savings: '$350', impact: '25%' },
-    { name: 'Roof Tiles', company: 'Skanska', price: '$1300', savings: '$200', impact: '15%' },
-    { name: 'PVC Pipes', company: 'Jacobs', price: '$900', savings: '$150', impact: '20%' },
-    { name: 'Insulation Foam', company: 'AECOM', price: '$2200', savings: '$450', impact: '40%' }
+    { name: 'Steel Beams', company: 'Skanska', price: 2000, savings: 300, impact: 20, location: 'north', type: 'steel' },
+    { name: 'Concrete Blocks', company: 'Turner', price: 1500, savings: 200, impact: 15, location: 'south', type: 'concrete' },
+    { name: 'Recycled Timber', company: 'Bechtel', price: 1000, savings: 400, impact: 30, location: 'north', type: 'wood' },
+    { name: 'Glass Panels', company: 'Skanska', price: 2500, savings: 500, impact: 10, location: 'north', type: 'glass' }
 ];
 
-// Function to populate the material list
+// Filter Materials based on applied filters
+function applyFilters() {
+    const locationFilter = document.getElementById('location').value;
+    const typeFilter = document.getElementById('material-type').value;
+    const maxCost = document.getElementById('cost').value;
+    const maxImpact = document.getElementById('impact').value;
+
+    const filteredMaterials = materials.filter(material => {
+        return (!locationFilter || material.location === locationFilter) &&
+            (!typeFilter || material.type === typeFilter) &&
+            (!maxCost || material.price <= maxCost) &&
+            (!maxImpact || material.impact <= maxImpact);
+    });
+
+    populateMaterialList(filteredMaterials);
+}
+
+document.getElementById('apply-filters').addEventListener('click', applyFilters);
+
 function populateMaterialList(materials) {
     const materialList = document.getElementById('material-list');
-    materialList.innerHTML = ''; // Clear any existing entries
-
+    materialList.innerHTML = ''; 
     materials.forEach((material) => {
         const li = document.createElement('li');
         li.innerHTML = `
             <strong>Material:</strong> ${material.name} <br>
             <strong>Company:</strong> ${material.company} <br>
-            <strong>Price:</strong> ${material.price} <br>
-            <strong>Savings:</strong> ${material.savings} <br>
-            <div class="impact">
-                <span class="leaf">🌿</span> 
-                <strong>Estimated Relative CO2 Emissions:</strong> 
-                <span class="arrow">↓</span> 
-                <span class="percent">${material.impact}</span>
-            </div>
-            <a class="details-link">Details</a>
+            <strong>Price:</strong> $${material.price} <br>
+            <strong>Environmental Impact:</strong> ${material.impact}% <br>
         `;
-
-        li.addEventListener('mouseover', () => {
-            li.style.backgroundColor = "#d1f7d1"; // Highlight
-        });
-
-        li.addEventListener('mouseout', () => {
-            li.style.backgroundColor = ""; // Reset
-        });
-
         materialList.appendChild(li);
     });
 }
 
-// Functionality for the search bar
-function setupSearchBar() {
-    const searchBar = document.getElementById('search-bar');
-
-    searchBar.addEventListener('input', (event) => {
-        const query = event.target.value.toLowerCase();
-        const filteredMaterials = materials.filter(material =>
-            material.name.toLowerCase().includes(query) ||
-            material.company.toLowerCase().includes(query)
-        );
-
-        populateMaterialList(filteredMaterials);
-    });
-}
-
-// Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
-    populateMaterialList(materials); // Load initial materials
-    setupSearchBar(); // Setup search interactivity
+    populateMaterialList(materials);
 });
-
