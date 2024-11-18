@@ -54,8 +54,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    height: calc(100vh - 100px);
+    margin-top: 60px; /* Move the search bar higher */
+    height: calc(100vh - 160px); /* Adjust to maintain balance */
 }
 
 #search-section {
@@ -78,4 +78,3 @@ main {
     border-color: #339900;
     box-shadow: 0 4px 8px rgba(51, 153, 0, 0.3); /* Highlight on focus */
 }
-
