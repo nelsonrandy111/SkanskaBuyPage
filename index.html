@@ -22,35 +22,42 @@
     </header>
 
     <main>
-        <div id="filter-section">
+        <div class="filters">
             <h3>Filters</h3>
-            <form id="filters-form">
-                <label for="location">Location:</label>
-                <select id="location" name="location">
-                    <option value="">All Locations</option>
-                    <option value="north">North Region</option>
-                    <option value="south">South Region</option>
-                </select>
+            <label for="location">Location:</label>
+            <select id="location">
+                <option value="">All</option>
+                <option value="north">North</option>
+                <option value="south">South</option>
+            </select>
 
-                <label for="material-type">Material Type:</label>
-                <select id="material-type" name="material-type">
-                    <option value="">All Types</option>
-                    <option value="steel">Steel</option>
-                    <option value="concrete">Concrete</option>
-                </select>
+            <label for="material-type">Material Type:</label>
+            <select id="material-type">
+                <option value="">All</option>
+                <option value="steel">Steel</option>
+                <option value="concrete">Concrete</option>
+                <option value="wood">Wood</option>
+                <option value="glass">Glass</option>
+                <option value="plastic">Plastic</option>
+                <option value="metal">Metal</option>
+                <option value="rubber">Rubber</option>
+                <option value="stone">Stone</option>
+                <option value="insulation">Insulation</option>
+                <option value="tile">Tile</option>
+                <option value="cement">Cement</option>
+                <option value="clay">Clay</option>
+            </select>
 
-                <label for="cost">Max Cost:</label>
-                <input type="number" id="cost" name="cost" placeholder="Enter max cost">
+            <label for="cost">Max Cost ($):</label>
+            <input type="number" id="cost" placeholder="Enter max cost">
 
-                <label for="impact">Max Environmental Impact (%):</label>
-                <input type="number" id="impact" name="impact" placeholder="Enter max impact">
+            <label for="impact">Min Environmental Impact (%):</label>
+            <input type="number" id="impact" placeholder="Enter min impact">
 
-                <button type="button" id="apply-filters">Apply Filters</button>
-            </form>
+            <button id="apply-filters">Apply Filters</button>
         </div>
 
-        <div id="search-section">
-            <input type="text" id="search-bar" placeholder="Search for materials, locations, or companies...">
+        <div class="material-list-container">
             <ul id="material-list"></ul>
         </div>
     </main>
@@ -58,6 +65,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
